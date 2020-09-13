@@ -1,6 +1,17 @@
+:root {
+    --icon-width: 3rem;
+    --icon-height: 3rem;
+    --content-font-size: 13px;
+}
+
 body {
     background-color: hsl(210, 46%, 95%);
     font-family: 'Manrope', sans-serif;
+}
+
+.attribution {
+    margin: 0 auto;
+    clear: both;
 }
 
 .header {
@@ -9,8 +20,37 @@ body {
 
 .content {
     font-weight: 500;
+    font-size: var(--content-font-size);
 }
 
 .card {
     color: hsl(217, 19%, 35%);
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+}
+
+.product-pic {
+    width: 20rem;
+    height: 20rem;
+    float: left;
+}
+
+.profile-pic {
+    float: left;
+    border-radius: 50%;
+    width: var(--icon-width);
+    height: var(--icon-height);
+}
+
+.poster-details {
+    font-size: var(--content-font-size);
+}
+
+.poster-name {
+    font-weight: 700;
+}
+
+.share-icons {
+    visibility: hidden;
 }
