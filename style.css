@@ -2,20 +2,42 @@
     --icon-width: 3rem;
     --icon-height: 3rem;
     --content-font-size: 13px;
+    --share-icons-bubble: hsl(217, 19%, 35%);
+}
+
+html {
+    height: 100%;
 }
 
 body {
     background-color: hsl(210, 46%, 95%);
     font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 100%;
 }
 
 .attribution {
-    margin: 0 auto;
     clear: both;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+}
+
+.product-text {
+    margin: 1rem;
+}
+
+.header-content {
+    margin: 1rem;
 }
 
 .header {
-    font-weight: 700;
+    font-weight: 1000;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 
 .content {
@@ -25,32 +47,122 @@ body {
 
 .card {
     color: hsl(217, 19%, 35%);
+    background-color: white;
     margin: 0 auto;
-    width: 70%;
-    height: 70%;
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+    width: 45rem;
+    height: 18rem;
+    box-shadow: 10px 8px 30px hsla(213, 17%, 51%, 0.5);
 }
 
 .product-pic {
-    width: 20rem;
-    height: 20rem;
-    float: left;
+    width: 15rem;
+    height: 18rem;
+    border-radius: 15px 0 0 15px;
 }
 
 .profile-pic {
-    float: left;
     border-radius: 50%;
     width: var(--icon-width);
     height: var(--icon-height);
+    float: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.poster-container {
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .poster-details {
     font-size: var(--content-font-size);
+    width: 50%;
 }
 
 .poster-name {
     font-weight: 700;
 }
 
+.poster-text {
+    line-height: 50%;
+}
+
+.share-button-container {
+    width: 2rem;
+    height: 2rem;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    right: 3rem;
+    border: none;
+}
+
+.share-button-container:focus{
+    outline: none;
+}
+
+.share-button-active {
+    background-color:  hsl(214, 17%, 51%);
+}
+
+.share-button {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    top: 20%;
+}
+
+.share-group {
+    text-align: center;
+    width: 40%;
+}
+
 .share-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 15px 5px 15px;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 12px;
+    background-color: var(--share-icons-bubble);
+    position: absolute;
+    right: -3rem;
+    top: 8rem;
+    font-size: 11px;
+}
+
+.caret {
+    z-index: 4;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 1rem solid transparent;
+    border-top-color: var(--share-icons-bubble);
+    position: absolute;
+    right: 3rem;
+    bottom: 5.5rem;
+}
+
+.hidden {
     visibility: hidden;
+}
+
+.share-icons li{
+    z-index: 5;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+}
+
+.share-icons li p{
+    margin: 0;
+    position: relative;
+    bottom: 5px;
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }

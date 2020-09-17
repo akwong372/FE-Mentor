@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Article preview component</title>
@@ -29,24 +29,29 @@
 
   <div class="card">
     <img class="product-pic" src="/images/drawers.jpg" alt="drawers">
-    <div>
-      <p class="header">Shift the overall look and feel by adding these wonderful
-        touches to furniture in your home</p>
-      <p class="content">Ever been in a room and felt like something was missing? Perhaps
-        it felt slightly bare and uninviting. I’ve got some simple tips
-        to help you make any room feel complete.</p>
-    </div>
-    <div>
-      <div class="poster-details">
-        <img class="profile-pic" src="/images/avatar-michelle.jpg" alt="">
-        <p class="poster-name">Michelle Appleton</p>
-        <p >28 Jun 2020</p>
+    <div class="product-text">
+      <div class="header-content">
+        <p class="header">Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home</p>
+        <p class="content">Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.</p>
       </div>
-      <div>
-        <img src="/images/icon-share.svg" alt="share button">
-        <div class="share-icons">
-          <ul>
-            <li>SHARE</li>
+      <div class="poster-container">
+        <div class="poster-details">
+          <img class="profile-pic" src="/images/avatar-michelle.jpg" alt="">
+          <div class="poster-text">
+            <p class="poster-name">Michelle Appleton</p>
+            <p>28 Jun 2020</p>
+          </div>
+        </div>
+        <button class="share-button-container" id="share-button-container">
+          <img class="share-button" src="/images/icon-share.svg" alt="share button">
+        </button>
+        <div class="share-group hidden" id="share-group">
+          <div class="caret"></div>
+          <ul class="share-icons">
+            <li><p>share</p></li>
             <li><img src="/images/icon-facebook.svg" alt="facebook"></li>
             <li><img src="/images/icon-twitter.svg" alt="twitter"></li>
             <li><img src="/images/icon-pinterest.svg" alt="pinterest"></li>
@@ -60,6 +65,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="index.js" async></script>
 </body>
 
 </html>
